@@ -11,23 +11,30 @@
 <body>
     <div class="navbar-container">
         <div class="navbar">
-            <h1 id="navbar-logo">
-                Assistant
-            </h1>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <div id="navbar-logo">
+                <h1 id="cursive">
+                    Assistant
+                </h1>
+                <h2 id="house">
+                    Home
+                </h2>
             </div>
-            <ul class="nav-menu">
-                <li><div class="nav-buttons">Home</div></li>
-                <li><div class="nav-buttons" placeholder="Search..">Search</div></li>
-                <li><div class="nav-buttons">Placeholder1</div></li>
-                <li><div class="nav-buttons">Placeholder2</div></li>
-                <li><div class="nav-buttons" id="sign-in">Account</div></li>
-                <li><div class="nav-buttons">EN/BG</div></li>
-                <li><div class="nav-buttons" id="settings">Settings</div></li>
-            </ul>
+            <div id="nav-menu-container">
+                <input id="searchBar" placeholder="Search.."/>
+                <div class="nav-menu">
+                    <div class="nav-buttons">placeholder</div>
+                    <div class="nav-buttons">placeholder</div>
+                    <div class="nav-buttons" id="sign-in">Account</div>
+                    <div class="nav-buttons">EN/BG</div>
+                </div>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span> 
+                    <!-- <span class="bar"></span> //not sure on the final settings wheel dinamic design
+                        <span class="bar"></span> -->
+                </div>
+            </div>
         </div>
     </div>
     <script src="../js/navbar.js"></script>
