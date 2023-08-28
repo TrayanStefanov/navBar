@@ -35,7 +35,7 @@
     grid-template-columns: 0.2fr auto 1fr;
     align-items: center;
     height: 80px;
-    width: 90%;
+    width: 95%;
     max-width: 1720px;
     margin:0 auto
 }
@@ -43,7 +43,6 @@
 #navbar-logo {
     color: yellowgreen;
     justify-self: start;
-    margin-left: 10px;
     cursor: pointer;
 }
 
@@ -53,18 +52,30 @@
     list-style: none;
     text-align: center;
     justify-self: end;
-    width: 70%;
+    width: 100%;
 }
 
 .nav-buttons {
     color: yellowgreen;
-
+    justify-self: end;
 }
 
 .nav-buttons:hover{
     color: red;
     transition:  all 0.2s ease-out;
     cursor: pointer;
+}
+
+#searchBar{
+    background-color: yellowgreen;
+    border: none;
+    padding: 4px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+#searchBar:focus{
+    outline: none;
 }
 
 #sign-in{
@@ -85,11 +96,39 @@
 
 .menu-toggle .bar{
     width: 25px;
-    height: 3px;
+    height: 8px;
     margin: 5px auto;
     transition: all 0.3s ease-in-out;
-    background: white;
+    background: #6fbcbc;
+    display: block;
+    cursor: pointer;
+    border: 1px solid;
 }
+
+.bar:nth-child(1){
+    transform: translateY(13px) rotate(60deg);
+}
+
+.bar:nth-child(3){
+    transform: translateY(-13px) rotate(-60deg);
+}
+
+/* .bar:nth-child(4){
+    background-color: #6fbcbc;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    transform: translateY(-30px);
+}
+
+.bar:nth-child(5){
+    background-color: var(--pinegreen);
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    transform: translateY(-46px);
+    border: 1px solid;
+} */
 
 @media screen and (max-width: 768px){
     .navbar-container{
