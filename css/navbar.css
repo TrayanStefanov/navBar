@@ -6,14 +6,6 @@
     --pinegreen: #258103;
 }
 
-#fz{
-    color: #065D5D;
-    color: #6fbcbc;
-    color: #137575;
-    color: #288686;
-    color: #409797;
-}
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -22,7 +14,7 @@
 }
 
 ::placeholder {
-    color: red;
+    color: rgb(161, 60, 20);
 }
 
 .navbar-container{
@@ -31,33 +23,43 @@
 }
 
 .navbar{
-    display: grid;
-    grid-template-columns: 0.2fr auto 1fr;
+    display: flex;
     align-items: center;
     height: 80px;
     width: 95%;
     max-width: 1720px;
-    margin:0 auto
+    margin:0 auto;
 }
 
 #navbar-logo {
     color: yellowgreen;
-    justify-self: start;
     cursor: pointer;
+    display: flex;
+}
+
+#house{
+    align-self: center;
+    margin: 4px;
+}
+
+#nav-menu-container {
+    display: flex;
+    width: 100%;
 }
 
 .nav-menu {
-    display: grid;
-    grid-template-columns: repeat(5, auto);
+    display:flex;
     list-style: none;
     text-align: center;
-    justify-self: end;
     width: 100%;
+    flex-grow: 4;
 }
 
 .nav-buttons {
     color: yellowgreen;
-    justify-self: end;
+    margin: 5px 10px;
+    flex-grow: 1;
+    align-self: center;
 }
 
 .nav-buttons:hover{
@@ -72,6 +74,9 @@
     padding: 4px;
     border-radius: 4px;
     width: 100%;
+    flex-grow: 6;
+    align-self: center;
+    margin: 5px 10px;
 }
 
 #searchBar:focus{
@@ -80,14 +85,14 @@
 
 #sign-in{
     background-color:#62CE3A;
-    color: red;
+    color: rgb(161, 60, 20);
     padding: 6px 16px;
     border-radius: 4px;
 }
 
 #sign-in:hover{
     background-color: transparent;
-    color: White;
+    color: yellowgreen;
     padding: 5px 15px;
     border-radius: 4px;
     border: solid 1px var(--lime);
@@ -98,11 +103,10 @@
     width: 25px;
     height: 8px;
     margin: 5px auto;
-    transition: all 0.3s ease-in-out;
-    background: #6fbcbc;
+    transition: all 0.4s ease-in-out;
+    background: #1f5f07;
     display: block;
     cursor: pointer;
-    border: 1px solid;
 }
 
 .bar:nth-child(1){
@@ -112,8 +116,6 @@
 .bar:nth-child(3){
     transform: translateY(-13px) rotate(-60deg);
 }
-
-
 
 /* .bar:nth-child(4){
     background-color: #6fbcbc;
@@ -130,9 +132,7 @@
     border-radius: 50%;
     transform: translateY(-46px);
     border: 1px solid;
-} 
-    not sure on the final settings wheel dinamic design
-*/
+} */
 
 @media screen and (max-width: 768px){
     .navbar-container{
@@ -140,8 +140,8 @@
     }
 
     .nav-menu{
-        display: grid;
-        grid-template-columns: auto;
+        display: flex;
+        flex-direction: column;
         background:#62CE3A;
         margin: 0px;
         width: 100%;
@@ -153,11 +153,10 @@
     }
 
     #navbar-logo{
-        margin-left: 20px;
+        margin-left: 0px;
     }
 
     .nav-menu.active{
-        background: red;
         left: 0;
         opacity: 1;
         transition: all 0.5s ease;
@@ -165,28 +164,28 @@
 
     .nav-buttons{
         text-align: center;
-        color: red;
+        color: rgb(161, 60, 20);
         line-height: 60px;
         width:100%;
-        display: table;
+        margin: 0;
     }
 
     .nav-buttons:hover{
-        background-color: gray;
-        color: white;
+        background-color: #258103;
+        color: yellowgreen;
         transition: all 0.5s ease-out;
     }
 
-    .navbar{
-        width: 100%;
+    #nav-menu-container{
+        display: flex;
     }
 
     #sign-in{
         border: none;
         padding: 0;
         border-radius: 0;
-        background-color: gray;
-        color: red;
+        background-color: #62CE3A;
+        color: rgb(161, 60, 20);
         transition: all 0.4 ease-out;
     }
 
@@ -194,26 +193,33 @@
         border: none;
         padding: 0;
         border-radius: 0;
-        background-color: #62CE3A;
-        color: red;
+        background-color: #258103;
+        color: yellowgreen;
         transition: all 0.4 ease-out;
     }
 
     #mobile-menu{
-        position: absolute;
-        top:20%;
-        right: 5%;
-        transform: translate(5%,20%);
-
+        flex-grow: 1;
     }
 
     .menu-toggle .bar{
         display: block;
         cursor: pointer;
+        border: none;
+        height: 6.5px;
+        transition: all 0.4s ease-in-out;
     }
 
     .menu-toggle:hover{
         cursor: pointer;
+    }
+
+    .bar:nth-child(1){
+        transform: translateY(20px) rotate(0deg);
+    }
+
+    .bar:nth-child(3){
+        transform: translateY(-20px) rotate(0deg);
     }
 
     #mobile-menu.is-active .bar:nth-child(2){
@@ -221,10 +227,10 @@
     }
 
     #mobile-menu.is-active .bar:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
+        transform: translateY(11.5px) rotate(45deg);
     }
 
     #mobile-menu.is-active .bar:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-11.5px) rotate(-45deg);
     }
 }
